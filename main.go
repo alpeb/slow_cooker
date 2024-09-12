@@ -546,7 +546,7 @@ func main() {
 				if managedResp.failedHashCheck {
 					failedHashCheck++
 				}
-				if managedResp.code >= 200 && managedResp.code < 500 {
+				if managedResp.code >= 200 && managedResp.code < 400 {
 					good++
 					promSuccesses.Inc()
 					promLatencyMSHistogram.Observe(float64(respLatencyNS / msInNS))
